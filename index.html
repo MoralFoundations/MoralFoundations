@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Political Compass Project</title>
+        <link rel='shortcut icon' type='image/x-icon' href='icon.ico' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+
+    <script>
+        window.onload = start;
+
+        function start()
+        {
+            //This is where you call functions and put general document editing code.
+
+        }
+
+         function createPara(text, id)
+                //Very imporant function to reduce time wasted making paragraphs manually!
+            {
+                var para = document.createElement("p");
+                var t = document.createTextNode(text);
+                para.appendChild(t);
+                document.getElementById("main").appendChild(para);
+                para.id = id;
+            }
+        //The rest of the functions go here
+
+
+    </script>
+    <script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(101050272); }catch(e){}</script>
+
+<style>
+#firsttext{
+  font-family: "Uni Sans Heavy";
+  color: #839496;
+}
+#secondtext{
+  font-family: "Uni Sans Heavy";
+  color: #839496;
+  text-align: center;
+}
+#submit:hover{
+  background-color:#0b6ea9;
+  border-color:#0b6ea9;
+  color: #839496;
+}
+#submit{
+   background-color:#4889c4;
+   border-color:#4889c4;
+   color: black;
+   font-family: "Uni Sans Heavy";
+ }
+</style>
+
+    <body class="container" style = background-color:black>
+
+    <div class="jumbotron" style = background-color:#36393F>
+
+      <div>
+        <h1 class="display-4" id = "secondtext">Moral Foundations Test</h1>
+        <p class="lead" id = "secondtext">A six dimensional political psychology test</p>
+        <hr class="my-4">
+        <center>
+        <img src="foundations.png" alt="Political compass values" width = "500">
+        </<center>
+      <div>
+        <br>
+        <p id = "firsttext" > Moral Foundations Theory, developed by psychologists Jonathan Haidt and Craig Joseph, suggests that there are innate and universal psychological foundations underlying human morality. According to the theory, people's moral judgments are based on six primary foundations: Care, Fairness, Liberty, In-Group Loyalty, Purity, and Authority. These foundations represent evolved mechanisms that have helped humans navigate social interactions throughout history. Individuals and cultures may prioritize these foundations differently, leading to variations in moral values and beliefs. In this test, you will be presented with a statement, and then will answer with your opinion on the statement from a range of <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly effecting your scores. Your final scores will be shown as a percentage for each foundation.</p>
+        <p id = "firsttext" >There are 48 questions in the test.</p>
+
+        <a href="1CARE.html"><button id="submit" class="btn btn-primary btn-lg btn-block">Begin!</button></a>
+        <hr class="my-4">
+    </div>
+
+    </body>
+
+</html>
+
+<!--  Political compass webpage written in HTML and JS.
+
+    Copyright (C) 2017  Sapply
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    Contact info:
