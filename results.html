@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -234,6 +233,7 @@
     #description{
       font-family: "Uni Sans Heavy";
       color: #839496;
+      text-align: left;
     }
     #baddescription{
       font-family: "Uni Sans Heavy";
@@ -257,7 +257,7 @@
 <body style = background-color:black>
 
 <div class="container">
-<div class="jumbotron" style = background-color:#36393F>
+<div class="jumbotron" style = background-color:#36393F style = width:300>
   <center>
     <h3 class="display-4" id='resultspage'>Your results:</h3>
         <div id='github'>Take the test at: moralfoundations.github.io
@@ -270,200 +270,32 @@
     <div><h1 id ="ideoheader">Explanation:</h1><br>
     </div>
 
-    <p id='description'> Moral Foundations Theory, developed by psychologists Jonathan Haidt and Craig Joseph, suggests that there are innate and universal psychological foundations underlying human morality. According to the theory, people's moral judgments are based on six primary foundations: Care, Fairness, Liberty, In-Group Loyalty, Purity, and Authority. These foundations represent evolved mechanisms that have helped humans navigate social interactions throughout history. Individuals and cultures may prioritize these foundations differently, leading to variations in moral values and beliefs. The theory provides insights into the diverse moral perspectives observed across societies and helps explain the differences in moral reasoning and values among individuals.</p>
+    <div id="main" class="col-sm-10 col-md-9">
 
-      <p id='description'>
-The Care foundation is defined by a desire to minimize the suffering of others. The Fairness foundation is defined by a desire for people to be held accountable for their actions in an equal playing field. The Liberty foundation is defined by a desire for people to have free autonomy over their lives without coercion. The In-Group Loyalty foundation is defined by a desire for members of one's in-groups (such as one's family, tribe, or nation) to profess their loyalty, either by sacrificing their own wellbeing for that of the group, or by sacrificing their sympathies for those outside of the group if demanded. The Purity foundation is defined by a desire to preserve a standard of "high culture" and avoid behavior that is percieved as degenerate or spiritually degrading. The Authority foundation is defined by a desire for people to fall in line with the established social order as a means of preserving societal stability.
-</p>
 
+
+    <p id='description'> Moral Foundations Theory, developed by psychologists Jonathan Haidt and Craig Joseph, suggests that there are innate and universal psychological foundations underlying human morality:</p>
+
+    <p id="description">The <b style="color:#d3736c;">CARE</b> foundation is defined by a desire to minimize the suffering of others. <br> Those who score highly in it are more likely to value tolerance, pacifism, generosity, and mercy.</p>
+    <p id="description">The <b style="color:#efb573;">FAIRNESS</b> foundation is defined by a desire for people to be held accountable for their actions in an equal playing field. <br>Those who score highly in it are more likely to value equality, justice, reciprocity, integrity, and honesty.</p>
+    <p id="description">The <b style="color:#f9d570;">LIBERTY</b> foundation is defined by a desire for people to have agency over their lives without outside coercion. <br>Those who score highly in it are more likely to value autonomy, privacy, free speech, and voluntarism.</p>
+    <p id="description">The <b style="color:#9ebe7e;">INGROUP-LOYALTY</b> foundation is defined by a desire for members of one's "natural" ingroups (such as their family, tribe, or nation) to forego their personal aspirations and sympathies towards external causes in order to benefit the group. Those who score more highly in it are more likely to value self-sacrifice, strength, preservation of culture, and patriotism. </p>
+    <p id="description">The <b style="color:#77a9d9;">PURITY</b> foundation is defined by a desire to preserve a standard of "high culture" and avoid behavior that is percieved as degenerate or spiritually degrading. <br>Those who score highly in it are more likely to value cleanliness, beauty, abstinence, chastity, and spirituality.</p>
+    <p id="description">The <b style="color:#8a83c1;">AUTHORITY</b> foundation is defined by a desire to achieve stability through a structured social order, and deference to the rules, authorities, and systems of merit within said order. <br>Those who score highly in it are more likely to value duty, merit, discipline, lawfulness, and stability.</p>
+
+  </div>
 
     <h5 id='bestSystem'></h5>
     <div>
     </div>
     <p id='description' ></p><br>
 
-    <div><h1 id="ideoheader">Your furthest ideology:</h1><br>
-    </div>
     <h5 id='worstSystem'></h5>
     <div>
     </div>
     <p id='baddescription' ></p><br>
 </center>
 </div>
-
-
-<script>
-
-if(getScoreGov < 50 && getScoreCiv <= 50 && getScoreEcon < 50 && getScoreCul < 50){
-document.getElementById('bestSystem').innerHTML = "Collectivism";
-document.getElementById('description').innerHTML = "All citizens of a nation should be united under a single collective identity, consisting of nationality, class, and ethnicity and/or religion. Through the mass assimilation of society by a iron-fist government: a strong, content, and unified citizenry will emerge, where individuals will all be willing to sacrifice their personal avarices for the wellbeing of the collective.";
-
-}
-if(getScoreGov < 50 && getScoreCiv <= 50 && getScoreEcon >= 50 && getScoreCul < 50){
-document.getElementById('bestSystem').innerHTML = "Fascism";
-document.getElementById('description').innerHTML = "A nation should strive to be as strong, hierarchical. and powerful as possible. Through a competetive economy, strict social laws, centralized government, and an ethno-religiously homogenous population, all citizens will become strong as individuals and even stronger as a united country";
-
-}
-if(getScoreGov < 50 && getScoreCiv <= 50 && getScoreEcon < 50 && getScoreCul >= 50){
-document.getElementById('bestSystem').innerHTML = "Communism";
-document.getElementById('description').innerHTML = "The fundamental problem of society is the class conflict between the rich and poor. All other conflicts such as race and religion were artificially created to distract from class conflict. Through a strong dictatorship, the rich will be purged and class will be abolished";
-
-}
-if(getScoreGov < 50 && getScoreCiv <= 50 && getScoreEcon >= 50 && getScoreCul >= 50){
-document.getElementById('bestSystem').innerHTML = "State Capitalism";
-document.getElementById('description').innerHTML = "Economic efficiency should be the primary goal of a nation. Freedom and culture should come second to the demands of the economy. A strong state should work intandem with capitalism to prioritize growth, which will allow its citizens to prosper in the long term.";
-
-}
-if(getScoreGov >= 50 && getScoreCiv > 50 && getScoreEcon >= 50 && getScoreCul >= 50){
-document.getElementById('bestSystem').innerHTML = "Individualism / Libertarianism";
-document.getElementById('description').innerHTML = "The freedoms and desires of the individual supersede any collective responsability. The government should regulate personal life and the economy as little as possible, and society should respect those who diverge from the status quo";
-
-}
-if(getScoreGov >= 50 && getScoreCiv > 50 && getScoreEcon >= 50 && getScoreCul < 50){
-document.getElementById('bestSystem').innerHTML = "Paleolibertarianism";
-document.getElementById('description').innerHTML = "The world has clearly defined winners and losers, but it is not the role of the state to decide either. The government should refrain from regulating personal or economic life, for society will naturally uphold social standards on their own";
-
-}
-if(getScoreGov >= 50 && getScoreCiv > 50 && getScoreEcon < 50 && getScoreCul >= 50){
-document.getElementById('bestSystem').innerHTML = "Leftism";
-document.getElementById('description').innerHTML = "Everyone deserves to pursue their goals without fear of extreme poverty, state intervention, or radical cultural pressure. The state should not exist to exert control over people, but instead to provide services and safety net for those in need and the community at large while punishing those who seek to exploit society for their own gain";
-
-}
-if(getScoreGov >= 50 && getScoreCiv <= 50 && getScoreEcon < 50 && getScoreCul >= 50){
-document.getElementById('bestSystem').innerHTML = "Democratic Socialism";
-document.getElementById('description').innerHTML = "The fundamental problem of society is the class conflict between the rich and poor. All other conflicts such as race and religion were artificially created to distract from class conflict. Through democracy, the working class must become aware of this, and use their votes to create a union state where the influence of oligarchs and bureaucrats is outweighed by the will of the people.";
-
-}
-if(getScoreGov < 50 && getScoreCiv > 50 && getScoreEcon >= 50 && getScoreCul >= 50){
-document.getElementById('bestSystem').innerHTML = "Benevolent Dictatorship";
-document.getElementById('description').innerHTML = "While many view democracy as a way to uphold freedom, it is too unstable to do so consistently and is likely to be exploited by demagogues. To ensure freedom truly exists indefinitely, society will be led by a small group of likeminded noblemen who abide by a constitution";
-
-}
-if(getScoreGov >= 50 && getScoreCiv <= 50 && getScoreEcon >= 50 && getScoreCul < 50){
-document.getElementById('bestSystem').innerHTML = "Neoconservatism";
-document.getElementById('description').innerHTML = "Every citizen, so long as they adopt their nation's morals and culture, should be safe, and given opportunity to further their social status. Strong policing and strict social standards ensure that those who don't assimilate will fail, while free markets and democracy ensure that those who do will thrive";
-
-}
-if(getScoreGov >= 50 && getScoreCiv <= 50 && getScoreEcon < 50 && getScoreCul < 50){
-document.getElementById('bestSystem').innerHTML = "Paleoconservatism";
-document.getElementById('description').innerHTML = "The citizens of a nation should be united under a common national and cultural identity, which is incompatible with the divisions caused by free market capitalism and top down political hierarchy. Both citizens and the state should serve the mutual interests of one another, to help create a homogenous and grateful society.";
-
-}
-if(getScoreGov < 50 && getScoreCiv > 50 && getScoreEcon >= 50 && getScoreCul < 50){
-document.getElementById('bestSystem').innerHTML = "Hoppeanism";
-document.getElementById('description').innerHTML = "While many view democracy as a way to uphold freedom, it divides people into competing factions which leads to chaos and creates demand for a stronger state. A stable dictatorship will ensure that both the personal freedoms and private property of its native citizens are protected indefinitely.";
-
-}
-if(getScoreGov < 50 && getScoreCiv > 50 && getScoreEcon < 50 && getScoreCul < 50){
-document.getElementById('bestSystem').innerHTML = "Reactionism";
-document.getElementById('description').innerHTML = "The world was better a long long time ago when society was much simpler. The expansion of the modern police state, abandonnement of traditional values, partisanism, and market domination by megacorporations has ruined a world that was once great. Our goal should be to return to that old way of life";
-}
-if(getScoreGov < 50 && getScoreCiv > 50 && getScoreEcon < 50 && getScoreCul >= 50){
-document.getElementById('bestSystem').innerHTML = "Technocracy";
-document.getElementById('description').innerHTML = "Most career politicians are incapable of proper decision making, and society would be better off lead and organized by the likes of respected academics and scientists who will unbiasedly optimize the interests of their citizens";
-}
-if(getScoreGov >= 50 && getScoreCiv <= 50 && getScoreEcon >= 50 && getScoreCul >= 50){
-document.getElementById('bestSystem').innerHTML = "Neoliberalism";
-document.getElementById('description').innerHTML = "The status quo of western capitalist democracy is the most valiable and functional political system to date. However, the increasing rise of terrorism, pandemics, and environmetal crisis have shown certain levels of authoritarianism are also needed to protect our safety.";
-}
-if(getScoreGov >= 50 && getScoreCiv > 50 && getScoreEcon < 50 && getScoreCul < 50){
-document.getElementById('bestSystem').innerHTML = "Grass Roots Populism";
-document.getElementById('description').innerHTML = "A nation's population is defined by its ancestral working class, which is threatened by the likes of globalism, authoritarianism, and predatory capitalism. The grass roots of civilization should be united against government bureaucrats, greedy businessmen, foreign interests, and radical activists, in an effort to maintain their freedoms and independence from outside influences";
-
-}
-if(getScoreGov == "Anarchy"){
-document.getElementById('bestSystem').innerHTML = "Anarchism";
-document.getElementById('description').innerHTML = "Morally, there is no difference between a democracy or an autocracy. The existance of a state will always be immoral because it uses force to impose theft and violence against its citizens. The best society would be one with no state, where every decision is made through voluntary transactions.";
-
-}
-
-//baddescription
-
-if(100-getScoreGov <= 50 && 100-getScoreCiv < 50 && 100-getScoreEcon <= 50 && 100-getScoreCul <= 50){
-document.getElementById('worstSystem').innerHTML = "Collectivism";
-document.getElementById('baddescription').innerHTML = "All citizens of a nation should be united under a single collective identity, consisting of nationality, class, and ethnicity and/or religion. Through the mass assimilation of society by a iron-fist government: a strong, content, and unified citizenry will emerge, where individuals will all be willing to sacrifice their personal avarices for the wellbeing of the collective.";
-
-}
-if(100-getScoreGov <= 50 && 100-getScoreCiv < 50 && 100-getScoreEcon > 50 && 100-getScoreCul <= 50){
-document.getElementById('worstSystem').innerHTML = "Fascism";
-document.getElementById('baddescription').innerHTML = "A nation should strive to be as strong, hierarchical, and powerful as possible. Through a competetive economy, strict social laws, centralized government, and an ethno-religiously homogenous population, all citizens will be strong as individuals and even stronger as a united country";
-
-}
-if(100-getScoreGov <= 50 && 100-getScoreCiv < 50 && 100-getScoreEcon <= 50 && 100-getScoreCul > 50){
-document.getElementById('worstSystem').innerHTML = "Communism";
-document.getElementById('baddescription').innerHTML = "The fundamental problem of society is the class conflict between the rich and poor. All other conflicts such as race and religion were artificially created to distract from class conflict. Through a strong dictatorship, the rich will be purged and class will be abolished";
-
-}
-if(100-getScoreGov <= 50 && 100-getScoreCiv < 50 && 100-getScoreEcon > 50 && 100-getScoreCul > 50){
-document.getElementById('worstSystem').innerHTML = "State Capitalism";
-document.getElementById('baddescription').innerHTML = "Economic efficiency should be the primary goal of a nation. Freedom and culture should come second to the demands of the economy. A strong state should work intandem with capitalism to prioritize growth, which will allow its citizens to prosper in the long term.";
-
-}
-if(100-getScoreGov > 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon > 50 && 100-getScoreCul > 50){
-document.getElementById('worstSystem').innerHTML = "Individualism / Libertarianism";
-document.getElementById('baddescription').innerHTML = "The freedoms and desires of the individual supersede any collective responsability. The government should regulate personal life and the economy as little as possible, and society should respect those who diverge from the status quo";
-
-}
-if(100-getScoreGov > 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon > 50 && 100-getScoreCul <= 50){
-document.getElementById('worstSystem').innerHTML = "Paleolibertarianism";
-document.getElementById('baddescription').innerHTML = "The world has clearly defined winners and losers, but it is not the role of the state to decide either. The government should refrain from regulating personal or economic life, for society will naturally uphold social standards on their own";
-
-}
-if(100-getScoreGov > 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon <= 50 && 100-getScoreCul > 50){
-document.getElementById('worstSystem').innerHTML = "Leftism";
-document.getElementById('baddescription').innerHTML = "Everyone deserves to pursue their goals without fear of extreme poverty, state intervention, or radical cultural pressure. The state should not exist to exert control over people, but instead to provide services and safety net for those in need and the community at large while punishing those who seek to exploit the system for their own gain";
-
-}
-if(100-getScoreGov > 50 && 100-getScoreCiv < 50 && 100-getScoreEcon <= 50 && 100-getScoreCul > 50){
-document.getElementById('worstSystem').innerHTML = "Democratic Socialism";
-document.getElementById('baddescription').innerHTML = "The fundamental problem of society is the class conflict between the rich and poor. All other conflicts such as race and religion were artificially created to distract from class conflict. Through democracy, the working class must become aware of this, and use their votes to create a union state where the influence of oligarchs and bureaucrats is outweighed by the will of the people.";
-
-}
-if(100-getScoreGov <= 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon > 50 && 100-getScoreCul > 50){
-document.getElementById('worstSystem').innerHTML = "Benevolent Dictatorship";
-document.getElementById('baddescription').innerHTML = "While many view democracy as a way to uphold freedom, it is too unstable to do so consistently. To ensure freedom truly exists indefinitely, society will be led by a small group of likeminded noblemen who abide by a constitution";
-
-}
-if(100-getScoreGov > 50 && 100-getScoreCiv < 50 && 100-getScoreEcon > 50 && 100-getScoreCul <= 50){
-document.getElementById('worstSystem').innerHTML = "Neoconservatism";
-document.getElementById('baddescription').innerHTML = "Every citizen, so long as they adopt their nation's morals and culture, should be safe, and given opportunity to further their social status. Strong policing and strict social standards ensure that those who don't assimilate will fail, while free markets and democracy ensure that those who do will thrive";
-
-}
-if(100-getScoreGov > 50 && 100-getScoreCiv < 50 && 100-getScoreEcon <= 50 && 100-getScoreCul <= 50){
-document.getElementById('worstSystem').innerHTML = "Paleoconservatism";
-document.getElementById('baddescription').innerHTML = "The citizens of a nation should be united under a common national and cultural identity, which is incompatible with the divisions caused by free market capitalism and top down political hierarchy. Both citizens and the state should serve the mutual interests of one another, to help create a homogenous and grateful society.";
-
-}
-if(100-getScoreGov <= 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon > 50 && 100-getScoreCul <= 50){
-document.getElementById('worstSystem').innerHTML = "Hoppeanism";
-document.getElementById('baddescription').innerHTML = "While many view democracy as a way to uphold freedom, it divides people into competing factions which leads to chaos and creates demand for a stronger state. A stable dictatorship will ensure that both the personal freedoms and private property of its native citizens are protected indefinitely.";
-
-}
-if(100-getScoreGov <= 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon <= 50 && 100-getScoreCul <= 50){
-document.getElementById('worstSystem').innerHTML = "Reactionism";
-document.getElementById('baddescription').innerHTML = "The world was better a long long time ago when society was much simpler. The expansion of the modern police state, abandonnement of traditional values, partisanism, and market domination by megacorporations has ruined a world that was once great. Our goal should be to return to that old way of life";
-}
-if(100-getScoreGov <= 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon <= 50 && 100-getScoreCul > 50){
-document.getElementById('worstSystem').innerHTML = "Technocracy";
-document.getElementById('baddescription').innerHTML = "Most career politicians are incapable of proper decision making, and society would be better off lead and organized by the likes of respected academics and scientists who will unbiasedly optimize the interests of their citizens";
-}
-if(100-getScoreGov > 50 && 100-getScoreCiv < 50 && 100-getScoreEcon > 50 && 100-getScoreCul > 50){
-document.getElementById('worstSystem').innerHTML = "Neoliberalism";
-document.getElementById('baddescription').innerHTML = "The status quo of western capitalist democracy is the most valuable and functional political system to date. However, the increasing rise of terrorism, pandemics, and environmetal crisis have shown certain levels of authoritarianism are also needed to protect our safety.";
-
-}
-if(100-getScoreGov > 50 && 100-getScoreCiv >= 50 && 100-getScoreEcon <= 50 && 100-getScoreCul <= 50){
-document.getElementById('worstSystem').innerHTML = "Grass Roots Populism";
-document.getElementById('baddescription').innerHTML = "A nation's population is defined by its ancestral working class, which is threatened by the likes of globalism, authoritarianism, and predatory capitalism. The grass roots of civilization should be united against government bureaucrats, greedy businessmen, foreign interests, and radical activists to protect their freedoms and independence from outside influences.";
-
-}
-if(getScoreGov == "Anarchy"){
-document.getElementById('worstSystem').innerHTML = "Totalitarianism";
-document.getElementById('baddescription').innerHTML = "Power is not a means, but an end. Society functions best when every citizen has their life planned down to the detail by an oppressive insurmountable government. The goal of this government does not matter so long as all citizens obey its authority, as it is the role of all people to serve as a cog in the machine";
-
-}
-
-</script>
 
 </body>
 
