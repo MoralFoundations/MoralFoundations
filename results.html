@@ -49,72 +49,74 @@
         var ctx = can.getContext("2d");
 
         //Background
+        var img = document.getElementById("finalpage.png");
+        ctx.drawImage(img, 0, 0, 1080, 1080);
 
         //Care
         ctx.beginPath();
-        ctx.rect(184, 15, getCare(), 81);
+        ctx.rect(229, 284, getCare(), 99);
         ctx.fillStyle = "#d3736c";
         ctx.fill();
 
         //Fairness
         ctx.beginPath();
-        ctx.rect(184, 118, getFairness(), 81);
+        ctx.rect(229, 412, getFairness(), 99);
         ctx.fillStyle = "#efb573";
         ctx.fill();
 
         //Liberty
         ctx.beginPath();
-        ctx.rect(184, 223, getLiberty(), 81);
+        ctx.rect(229, 540, getLiberty(), 99);
         ctx.fillStyle = "#f9d570";
         ctx.fill();
 
         //Loyalty
         ctx.beginPath();
-        ctx.rect(184, 326, getLoyalty(), 81);
+        ctx.rect(229, 668, getLoyalty(), 99);
         ctx.fillStyle = "#9ebe7e";
         ctx.fill();
 
         //Purity
         ctx.beginPath();
-        ctx.rect(184, 429, getPurity(), 81);
+        ctx.rect(229, 796, getPurity(), 99);
         ctx.fillStyle = "#77a9d9";
         ctx.fill();
 
         //Authority
         ctx.beginPath();
-        ctx.rect(184, 533, getAuthority(), 81);
+        ctx.rect(229, 926, getAuthority(), 99);
         ctx.fillStyle = "#8a83c1";
         ctx.fill();
 
         //Care
-        ctx.font = "25px American Typewriter";
+        ctx.font = "30px American Typewriter";
         ctx.fillStyle = "#834541";
-        ctx.fillText(Math.round(getScoreCare * "2.08333333"), 200, 67);
+        ctx.fillText(Math.round(getScoreCare * "2.08333333"), 245, 347);
 
         //Fairness
-        ctx.font = "25px American Typewriter";
+        ctx.font = "30px American Typewriter";
         ctx.fillStyle = "#846C54";
-        ctx.fillText(Math.round(getScoreFairness  * "2.08333333"), 200, 167);
+        ctx.fillText(Math.round(getScoreFairness  * "2.08333333"), 245, 475);
 
         //Liberty
-        ctx.font = "25px American Typewriter";
+        ctx.font = "30px American Typewriter";
         ctx.fillStyle = "#B39852";
-        ctx.fillText(Math.round(getScoreLiberty  * "2.08333333"), 200, 272);
+        ctx.fillText(Math.round(getScoreLiberty  * "2.08333333"), 245, 603);
 
         //Loyalty
-        ctx.font = "25px American Typewriter";
+        ctx.font = "30px American Typewriter";
         ctx.fillStyle = "#576749";
-        ctx.fillText(Math.round(getScoreLoyalty  * "2.08333333"), 200, 375);
+        ctx.fillText(Math.round(getScoreLoyalty  * "2.08333333"), 245, 731);
 
         //Purity
-        ctx.font = "25px American Typewriter";
+        ctx.font = "30px American Typewriter";
         ctx.fillStyle = "#3F72A3";
-        ctx.fillText(Math.round(getScorePurity  * "2.08333333"), 200, 478);
+        ctx.fillText(Math.round(getScorePurity  * "2.08333333"), 245, 859);
 
         //Authority
-        ctx.font = "25px American Typewriter";
+        ctx.font = "30px American Typewriter";
         ctx.fillStyle = "#605AA6";
-        ctx.fillText(Math.round(getScoreAuthority  * "2.08333333"), 200, 582);
+        ctx.fillText(Math.round(getScoreAuthority  * "2.08333333"), 245, 989);
 
 //for numbers
         document.getElementById('CareScore').innerHTML = sessionStorage.getItem('scoreCare');
@@ -128,32 +130,32 @@
     function getCare()
     {
 
-        return (intCare * 12.44);
+        return (intCare * 15.45);
     }
     function getFairness()
     {
 
-        return (intFairness * 12.44);
+        return (intFairness * 15.45);
     }
     function getLiberty()
     {
 
-        return (intLiberty * 12.44);
+        return (intLiberty * 15.45);
     }
     function getLoyalty()
     {
 
-        return (intLoyalty * 12.44);
+        return (intLoyalty * 15.45);
     }
     function getPurity()
     {
 
-        return (intPurity * 12.44);
+        return (intPurity * 15.45);
     }
     function getAuthority()
     {
 
-        return (intAuthority * 12.44);
+        return (intAuthority * 15.45);
     }
 
      function createPara(text, id)
@@ -178,8 +180,6 @@
         background-image: url("finalpage.png");
         background-size: contain;
         width: 100%;
-        max-width: 1200px;
-        max-height: 900px;
     }
 
 
@@ -264,11 +264,8 @@
 <div class="container">
 <div class="jumbotron" style = background-color:#36393F>
   <center>
-    <h3 class="display-4" id='resultspage'>Your results:</h3>
-        <div id='github'>Take the test at: moralfoundations.github.io</div>
-
     <div class="row">
-        <div class="col-lg-8 offset-2"><canvas id="canvas" height="642.4" width="868"></canvas></div>
+        <div class="col-lg-8 offset-2"><canvas id="canvas" height="1080" width="1080"></canvas></div>
       </div>
 
     <div><h1 id ="ideoheader">Explanation:</h1><br>
@@ -357,6 +354,8 @@ What is the meaning of the <b style="color:#8a83c1;">AUTHORITY</b> foundation?
     <div>
     </div>
     <p id='baddescription' ></p><br>
+
+    <img src="finalpage.png" id='finalpage.png' width = "0%">
 </center>
 </div>
 
