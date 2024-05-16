@@ -125,6 +125,10 @@
         document.getElementById('LoyaltyScore').innerHTML = sessionStorage.getItem('scoreLoyalty');
         document.getElementById('PurityScore').innerHTML = sessionStorage.getItem('scorePurity');
         document.getElementById('AuthorityScore').innerHTML = sessionStorage.getItem('scoreAuthority');
+
+        //Banner
+        document.getElementById("banner").src = c.toDataURL();
+
     }
 
     function getCare()
@@ -235,6 +239,36 @@
       color: #839496;
       text-align: left;
     }
+    #caredescription{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+      text-align: left;
+    }
+    #fairnessdescription{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+      text-align: left;
+    }
+    #libertydescription{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+      text-align: left;
+    }
+    #loyaltydescription{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+      text-align: left;
+    }
+    #puritydescription{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+      text-align: left;
+    }
+    #authoritydescription{
+      font-family: "Uni Sans Heavy";
+      color: #839496;
+      text-align: left;
+    }
     #description2{
       font-family: "Uni Sans Heavy";
       color: #839496;
@@ -265,7 +299,10 @@
 <div class="jumbotron" style = background-color:#36393F>
   <center>
     <div class="row">
-        <div class="col-lg-8 offset-2"><canvas id="canvas" height="1080" width="1080"></canvas></div>
+
+      <img src="" id="banner"></canvas></br>
+
+        <div class="col-lg-8 offset-2"><canvas id="canvas" height="1080" width="1080"></div>
       </div>
 
     <div><h1 id ="ideoheader">Explanation:</h1><br>
@@ -274,6 +311,13 @@
     <br>
 
     <div id="main" class="col-sm-10 col-md-9">
+
+      <p id='caredescription' ></p><br>
+      <p id='fairnessdescription' ></p><br>
+      <p id='libertydescription' ></p><br>
+      <p id='loyaltydescription' ></p><br>
+      <p id='puritydescription' ></p><br>
+      <p id='authoritydescription' ></p><br>
 
   <details>
   <summary id="description">
@@ -345,11 +389,6 @@ What is the meaning of the <b style="color:#8a83c1;">AUTHORITY</b> foundation?
 
   </div>
 
-    <h5 id='bestSystem'></h5>
-    <div>
-    </div>
-    <p id='description' ></p><br>
-
     <h5 id='worstSystem'></h5>
     <div>
     </div>
@@ -358,6 +397,93 @@ What is the meaning of the <b style="color:#8a83c1;">AUTHORITY</b> foundation?
     <img src="finalpage.png" id='finalpage.png' width = "0%">
 </center>
 </div>
+
+<script>
+//Care Results
+if(getScoreCare < 14.4){
+document.getElementById('caredescription').innerHTML = "Ideologically, you may consider yourself a darwinist. You find some individuals are clearly more valuable than others, and you do not feel pity towards those you view as holding society back. You may believe that communities, and the world more broadly, would function more cohesively if their incompetent, weak, disruptive, and delinquent members were coerced into submission so that the rest of civilization can thrive.";
+}
+if(getScoreCare < 24 && getScoreCare > 13.9){
+document.getElementById('caredescription').innerHTML = "Ideologically, you may consider yourself a realist. While you acknowledge the importance of compassion and empathy, you recognize there are practical limitations to the extent these values can be applied. You believe in personal responsibility and may expect individuals to solve their own problems rather than relying on external support, and are likely to view conflict as an inevitable part of human existence that society should be ready for rather than naively avoid.";
+}
+if(getScoreCare < 33.6 && getScoreCare > 23.5){
+document.getElementById('caredescription').innerHTML = "Ideologically, you wish to minimize the suffering of others, but believe this must be achieved by pragmatic means rather than by pure altruism. While you greatly value compassion and empathy, you believe this needs to be balanced with other considerations. You find politeness, mercy, tolerance, generosity, and peace as noble traits worth pursuing, but believe each will lead to a naive and overly vulnerable society incapable of dealing with hardship if pushed too far.";
+}
+if(getScoreCare > 33.12){
+document.getElementById('caredescription').innerHTML = "Ideologically, you place heavy emphasis on altruism, with your moral compass being deeply rooted in minimizing suffering and protecting the vulnerable whenever possible. Your values are guided by a strong sense of responsibility towards the welfare of both individuals and communities. You actively seek to create a more caring and nurturing society even when doing so may prove difficult or impractical.";
+}
+
+//Fairness Results
+if(getScoreFairness < 14.4){
+document.getElementById('fairnessdescription').innerHTML = "";
+}
+if(getScoreFairness < 24 && getScoreFairness > 13.9){
+document.getElementById('fairnessdescription').innerHTML = "";
+}
+if(getScoreFairness < 33.6 && getScoreFairness > 23.5){
+document.getElementById('fairnessdescription').innerHTML = "";
+}
+if(getScoreLiberty > 33.12){
+document.getElementById('fairnessdescription').innerHTML = "";
+}
+
+//Liberty Results
+if(getScoreLiberty < 14.4){
+document.getElementById('libertydescription').innerHTML = "You view liberal governance as insufficient for meeting the demands of society at large, and prefer more authoritarian models. You prioritize social cohesion and collective well-being over individual freedom and autonomy. Personal liberties are seen as secondary to the needs of society as a whole, and you are willing to sacrifice individual rights for the sake of a perceived greater good.";
+}
+if(getScoreLiberty < 24 && getScoreLiberty > 13.9){
+document.getElementById('libertydescription').innerHTML = "Although you oppose outright tyranny and totalitarianism, you view personal liberties as secondary to the needs of society as a whole, and are willing to sacrifice individual freedoms for the sake of perceived greater good. You believe in the importance of social order and openly support certain restrictions to maintain stability and harmony within society.";
+}
+if(getScoreLiberty < 33.6 && getScoreLiberty > 23.5){
+document.getElementById('libertydescription').innerHTML = "While you value individual freedom and autonomy, you also recognize the importance of balance and responsibility. You advocate for personal freedoms, but also acknowledge the need for reasonable restrictions to ensure the well-being and safety of society as a whole: possibly even viewing these restrictions as a means of promoting greater net freedom overall in the grander scheme of things. Your ideology provides a nuanced approach to liberty that takes into account both individual rights and collective interests.";
+}
+if(getScoreLiberty > 33.12){
+document.getElementById('libertydescription').innerHTML = "You strongly advocate for individual freedom and autonomy in all aspects of life. You believe that people should have the right to make their own choices without coercion from external centralized authorities such as a state or government, even if you may not necessarily agree with them. Principles such as free speech, privacy, and bodily autonomy are non-negotiable for you, and you maintain a strict opposition to government overreach.";
+}
+
+//In-Group Loyalty Results
+if(getScoreLoyalty < 14.4){
+document.getElementById('loyaltydescription').innerHTML = "To you, loyalty should only be given to those one voluntarily associates with such as their close friends, loved ones, or people with a similar ideological mindset, and is not owed to any communal organizations one is merely born into such as their family, nation, or peoples. You find in-group loyalty to be an arbitrarily restrictive source of division between individuals, and may have little attachment to your own in-groups.";
+}
+if(getScoreLoyalty < 24 && getScoreLoyalty > 13.9){
+document.getElementById('loyaltydescription').innerHTML = "You acknowledge the significance of family ties, national identity, and cultural heritage in shaping coherent communities and polities, but believe these organizations primarily exist to serve the individuals within them rather than the other way around. While you may still engage with your in-groups and view them as neccessary communities worth securing/protecting under the modern global system, your commitment is not as strong, and you believe individuals within them should prioritize individual autonomy and universal principles over loyalty to their extended communities: feeling inclined to question or challenge group practices if they conflict with personally held values or beliefs.";
+}
+if(getScoreLoyalty < 33.6 && getScoreLoyalty > 23.5){
+document.getElementById('loyaltydescription').innerHTML = "You value your extended communities such as your family, nation, and/or culture and feel a sense of loyalty towards them while expecting others to do the same, but your commitment is not absolute. You recognize the importance of community ties as well as protecting their sovereignty and cohesion, and believe everyone owes a degree of dedication/servitude to their in-groups. However, you also maintain a level of independence and may prioritize pursuing individual pursuits or upholding universalist principles over the aspirations of your extended communities, viewing total loyalty as a sign of blind fanaticism.";
+}
+if(getScoreLoyalty > 33.12){
+document.getElementById('loyaltydescription').innerHTML = "You are deeply patriotic and prioritize the well-being and unity of the extended communities you occupy: swearing allegiance to them. Family ties, national identity, and cultural heritage are crucial to you. You believe in sacrificing personal gain and aspirations for the collective good of your in-groups, and look down on those who do not appreciate their heritage. Your ideology is heavily influenced by securing the status of your extended communities, and you are deeply committed to preserving their cohesion, integrity, and influence.";
+}
+
+//Purity Results
+if(getScorePurity < 14.4){
+document.getElementById('puritydescription').innerHTML = "You place little to no importance on the concept of moral purity and reject social mores and standards of “high culture” altogether: accepting of diverse lifestyles and behaviors so long as nobody is directly harmed by them. You are likely to view such moral traditions as arbitrary to follow, snobbish (if not discriminatory) to expect, and tyrannical to enforce.";
+}
+if(getScorePurity < 24 && getScorePurity > 13.9){
+document.getElementById('puritydescription').innerHTML = "For the most part, you find adherence to classical social mores as restrictive and outdated, and prefer a more flexible approach to morality and ethics. You are generally more accepting of diverse lifestyles and behaviors and less judgmental of practices that deviate from established norms. In spite of this however, there remain certain actions and lifestyle choices which are in such poor-taste that you can’t help but disavow them even if they technically do not harm anybody directly.";
+}
+if(getScorePurity < 33.6 && getScorePurity > 23.5){
+document.getElementById('puritydescription').innerHTML = "You value the importance of moral purity and upholding certain standards of polite society, but your commitment is tempered by practical considerations and personal beliefs. You understand why social norms promoting things like chastity, modesty, romanticism, and spirituality exist and subsequently support them to a certain degree, but do not believe in strict adherence to them to the extent that they come at the cost of public conveniance or happiness.";
+}
+if(getScorePurity > 33.12){
+document.getElementById('puritydescription').innerHTML = "You place a strong emphasis on upholding social standards and adhering to principles of “high culture” as a means of maintaining purity in society, advocating for strict moral codes and social norms that promote chastity, modesty, romanticism, and spiritual purity. You are very critical of behaviors and practices that are perceived as morally impure or spiritually degrading: viewing them as a sign of encroaching decadence.";
+}
+
+//Authority Results
+if(getScoreAuthority < 14.4){
+document.getElementById('authoritydescription').innerHTML = "While some people may oppose certain leaders and/or systems of leadership and support questioning authority as a result: You have little faith in the very premise of authority altogether, and actively advocate towards resisting hierarchical structures and institutions, which you view as inherently oppressive or restrictive.";
+}
+if(getScoreAuthority < 24 && getScoreAuthority > 13.9){
+document.getElementById('authoritydescription').innerHTML = "You acknowledge the necessary role leadership, hierarchy, and institutions play in maintaining social order, but remain skeptical of authority and believe the legitimacy of everyone in a position of cultural, political, and economic power should at the very least be questioned. Even among institutions and authority figures that you view as legitimate and effective, you prefer a more laid back and less strict approach to leadership, the latter of which you view as overbearing.";
+}
+if(getScoreAuthority < 33.6 && getScoreAuthority > 23.5){
+document.getElementById('authoritydescription').innerHTML = "You value social order and respect those who demonstrate discipline, lawfulness, industriousness, and admiration for others who have demonstrated superior levels of competence: viewing the mass adoption of these traits as beneficial to the functioning and efficiency of society. Simultaneously however, you still believe it's healthy to remain skeptical of authority, and are able to appreciate the more laid back components of a society.";
+}
+if(getScoreAuthority > 33.12){
+document.getElementById('authoritydescription').innerHTML = "You strongly believe in social order, placing strict emphasis on conforming to the rules, systems, institutions, and hierarchies that you deem as crucial for maintaining stability. Among the masses, you admire those who demonstrate discipline, industriousness, and obedience to others who have demonstrated superior levels of competence. Among leaders, you admire those who take their jobs seriously and are able to assertively lead from the front using a “no nonsense” approach.";
+}
+
+</script>
 
 </body>
 
